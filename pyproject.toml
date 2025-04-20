@@ -1,0 +1,36 @@
+[project]
+name = "simulator_alignment_data"
+version = "0.0.1"
+description = "Datasets used in Simulator Alignment Project."
+authors = [
+  { name = "Paul Owoicho" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+  "pyserini ~= 0.44.0",
+  "ruff ~= 0.11.6",
+  "jsonlines ~= 4.0.0",
+  "pip ~= 25.0.1",
+  "beautifulsoup4 ~= 4.13.4",
+  "tqdm ~= 4.67.1",
+  "lxml ~= 5.3.2"
+]
+
+requires-python = "~=3.12.4"
+
+[tool.ruff]
+line-length = 99
+src = ["scripts"]
+include = ["pyproject.toml", "scripts/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts"]
+force-sort-within-sections = true
