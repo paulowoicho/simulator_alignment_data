@@ -30,7 +30,8 @@ class CAsT2022(BaseBenchMark):
 
         return lookup
 
-    def _get_passage_text(self, passage_id):
+    def _get_passage_text(self, passage_id: str | int) -> str:
+        passage_id = str(passage_id)
         doc_id, passage_id = passage_id.rsplit("-", 1)
         doc = self.search_engine.doc(doc_id).raw()
         doc = BeautifulSoup(doc, "lxml")
