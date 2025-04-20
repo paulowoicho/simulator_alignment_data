@@ -13,14 +13,14 @@ if __name__ == "__main__":
     # Replace with actual paths.
     benchmarks: list[BaseBenchMark] = [
         CAsT2022(
-            queries_path="path/to/queries",
-            qrels_path="path/to/qrels",
-            index_path="path/to/index",
+            queries_path="../../data/cast/queries/annotated_topics.json",
+            qrels_path="../../data/cast/queries/cast2022.qrel",
+            index_path="../../data/cast/trecweb_index/",
         ),
         iKAT2023(
-            queries_path="path/to/queries",
-            qrels_path="path/to/qrels",
-            index_path="path/to/index",
+            queries_path="../../data/ikat/data/queries/2023_test_topics.json",
+            qrels_path="../../data/ikat/data/queries/2023-qrels.all-turns.txt",
+            index_path="../../data/ikat/data/indexes/sparse/",
         ),
     ]
 
