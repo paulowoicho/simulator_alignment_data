@@ -24,3 +24,8 @@ class iKAT2023(BaseBenchMark):
                 lookup[query_id] = query
 
         return lookup
+
+    def _get_passage_text(self, passage_id: int | str) -> str:
+        passage = self.search_engine.doc(passage_id).raw()
+        parsed_passage: dict[str, str] = json.loads(passage)
+        return parsed_passage.get("contents", "")
