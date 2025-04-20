@@ -1,12 +1,11 @@
 from dataclasses import asdict
 from pathlib import Path
 
+from benchmarks.base import BaseBenchMark
+from benchmarks.cast import CAsT2022
+from benchmarks.ikat import iKAT2023
 import jsonlines  # type: ignore[import-not-found]
 import tqdm  # type: ignore[import-untyped]
-
-from base import BaseBenchMark  # type: ignore[import-not-found]
-from cast import CAsT2022  # type: ignore[import-not-found]
-from ikat import iKAT2023  # type: ignore[import-not-found]
 
 NUM_SAMPLES_TO_CREATE = 7500
 

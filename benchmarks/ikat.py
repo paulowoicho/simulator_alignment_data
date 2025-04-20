@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from base import BaseBenchMark  # type: ignore[import-not-found]
+from .base import BaseBenchMark
 
 
 class iKAT2023(BaseBenchMark):

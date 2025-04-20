@@ -3,7 +3,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup  # type: ignore[import-untyped]
 
-from base import BaseBenchMark  # type: ignore[import-not-found]
+from .base import BaseBenchMark
 
 
 class CAsT2022(BaseBenchMark):
